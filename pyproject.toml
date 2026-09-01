@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demo-app"
+version = "1.0.0"
+description = "Flask demo app for DevSecOps Day 5 CI/CD practice"
+requires-python = ">=3.9"
+dependencies = [
+    "flask",
+]
+
+[project.scripts]
+demo-app = "demo_app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
