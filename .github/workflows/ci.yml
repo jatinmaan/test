@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Say hello
+        run: echo "Hello, CI! This is my first workflow."
+      - name: Show the environment
+        run: |
+          echo "OS: $(uname -a)"
+          echo "Python: $(python3 --version)"
+          echo "Files in repo:"
+          ls -la
